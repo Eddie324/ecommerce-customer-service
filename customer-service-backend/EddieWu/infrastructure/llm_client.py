@@ -23,8 +23,8 @@ llm_client: BaseChatModel = init_chat_model(
 )
 
 
-# if __name__ == "__main__":
-#     response = llm_client.invoke("你好,我现在心情不好")
-#     print(response.content)
+if __name__ == "__main__":
+    response = llm_client.invoke("你好,我现在心情不好")
+    print(response.content)
 
 
