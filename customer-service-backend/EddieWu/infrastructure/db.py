@@ -1,9 +1,10 @@
 """
 操作数据库的session会话
 引擎 session (session.execute())
+数据库连接工厂
 """
 import asyncio
-from sqlalchemy.orm import Session
+
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession, AsyncEngine, async_sessionmaker, create_async_engine
 from EddieWu.config.settings import settings
@@ -24,7 +25,7 @@ def init_db_engine():
     await user.name---->报错
     :return:
     """
-    global engine
+    global engine, session_factory
     engine = create_async_engine(settings.database_url, echo=True)
 
     session_factory = async_sessionmaker(engine, expire_on_commit=False) # 不过期,从内存中获取数据

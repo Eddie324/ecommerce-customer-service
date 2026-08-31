@@ -27,4 +27,9 @@ if __name__ == "__main__":
     response = llm_client.invoke("你好,我现在心情不好")
     print(response.content)
 
-
+    """
+    流式调用：stream：同步的流式    astream:异步流式
+    非流式调用：invoke:同步非流式   ainvoke:异步非流式
+    Runnable组件提供的：抽象接口：定义常用的三组方法 batch  abatch
+    :return:
+    """

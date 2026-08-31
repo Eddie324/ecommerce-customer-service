@@ -1,5 +1,9 @@
 """
-用消息机器消息数据
+消息的类型有几种：
+1. 用户角色的消息
+2. 机器人角色回复的消息
+
+不管是进行网络传输或者是进行IO读写：永远都不能直接操作"对象" 对象是内存中的。
 """
 from enum import Enum
 from dataclasses import dataclass,field
