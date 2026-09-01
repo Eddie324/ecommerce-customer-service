@@ -122,7 +122,7 @@ class SystemCollectInformationContext(SystemContext):
 
 SYSTEM_CONTEXT_TO_CLASS: dict[str, type[SystemContext]] = {
     """
-    映射
+    映射表
     """
     "system_task_started": SystemTaskStartedContext,
     "system_task_interrupted": SystemTaskInterruptedContext,
