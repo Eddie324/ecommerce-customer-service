@@ -48,7 +48,7 @@ class SystemContext:
     系统流程上下文的基类(模版)
     flow_id: 系统流程ID: system_task_started
     step_id: 系统流程的步骤ID:start
-    flow_id/step_id一定要是这两个名字【在流程推进器的时候，解释原因】
+    flow_id/step_id 一定要是这两个名字【在流程推进器的时候，解释原因】
     """
 
     flow_id: str

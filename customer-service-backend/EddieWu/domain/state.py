@@ -179,7 +179,7 @@ class DialogueState:
             flow_id: 要恢复的业务流程流程ID
         Returns:
         """
-        # 1. 暂停栈中是否有元素
+        # 1. 校验暂停栈中是否有元素
         if not self.paused_tasks:
             return False
 
@@ -190,7 +190,7 @@ class DialogueState:
             self.active_task = paused_task
             return True
 
-        # 2.2 有指定的业务流程流程ID,从栈中根据指定的业务流程流程ID 查找
+        # 2.2 有指定的业务流程流程ID,从栈中根据指定的业务流程流程ID 遍历暂停栈,找到指定的业务流程流程ID
         for index, paused_task in enumerate(self.paused_tasks):
             if paused_task.flow_id == flow_id:
                 self.active_task = paused_task
